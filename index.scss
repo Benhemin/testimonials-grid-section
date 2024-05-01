@@ -1,0 +1,283 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECF2F8;
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color) {
+    -webkit-box-shadow: $top $left $blur $size $color;
+    -moz-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+ }
+
+.grid-container{
+    
+    @media  (min-width: 300px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        gap: 24px;
+        margin-top: 71px;
+        align-content: center;
+    }
+    @media  (min-width: 1250px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 49% 46%;
+        width: 77%;
+        height: 59%;
+        gap: 24px;
+        margin-top: 0px;
+    }
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.dark-img{
+    border: 2px solid #A775F1;
+}
+
+.img-container{
+    height: 28px;
+    width: 28px;
+}
+@mixin column-box{
+
+    @media (min-width: 300px){
+        padding: 10%;
+        padding-top: 0;
+        width: fit-content;
+        max-width: 87%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin: auto;
+        margin-top: 5%;
+        align-items: left;
+    }
+
+    @media (min-width: 1250px){
+        width: 88%;
+        height: 81%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin: auto;
+        margin-top: 5%;
+        align-items: left;
+    }
+}
+
+@mixin column-box-skinny{
+    @media (min-width: 300px){
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+        padding-top: 0;
+        width: fit-content;
+        max-width: 87%;
+        height: max-content;
+        row-gap: 1.25rem;
+        margin: auto;
+        margin-top: 10%;
+        align-items: left;
+    }
+    @media (min-width: 1250px){
+        width: 75%;
+        height: 81%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+        margin: auto;
+        margin-top: 10%;
+        align-items: left;
+    }
+}
+
+@mixin author-box{
+    text-align: left;
+    justify-self: left;
+}
+.author{
+    @include author-box();
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+.author-name-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    @include column-box();
+
+}
+
+.content-vert{
+    @include column-box-skinny();
+}
+.grid-item1{
+    @media  (min-width: 300px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    @media  (min-width: 700px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    background-color: #733FC8;
+    border-radius: 8px;
+    @include box-shadow(40px, 60px, 50px, -47px, rgba(72,85,106,0.24));
+}
+
+.grid-item2{
+    background-color: #48556A;
+    @media  (min-width: 300px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    @media  (min-width: 700px) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    border-radius: 8px;
+    @include box-shadow(40px, 60px, 50px, -47px, rgba(72,85,106,0.24));
+}
+
+.grid-item3{
+    background-color: #FFFFFF;
+    
+    @media  (min-width: 300px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 11;
+        grid-row-end: 13;
+    }
+    @media  (min-width: 700px) {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    border-radius: 8px;
+    @include box-shadow(40px, 60px, 50px, -47px, rgba(72,85,106,0.24));
+}
+
+.grid-item4{
+    background-color: #FFFFFF;
+    
+    @media  (min-width: 300px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    @media  (min-width: 700px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    border-radius: 8px;
+    @include box-shadow(40px, 60px, 50px, -47px, rgba(72,85,106,0.24));
+}
+
+.grid-item5{
+    background-color: #19202D;
+    
+    @media  (min-width: 300px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+    @media  (min-width: 700px) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    border-radius: 8px;
+    @include box-shadow(40px, 60px, 50px, -47px, rgba(72,85,106,0.24));
+}
+
+.bio-main-light{
+    font-size: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 18px;
+}
+
+.bio-sub-light{
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    color: #CFCFCF;
+    line-height: 18px;
+}
+
+.bio-main-dark{
+    font-size: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    color: #48556A;
+    line-height: 18px;
+}
+
+.bio-sub-dark{
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    color: #48556A;
+    line-height: 18px;
+}
+
+.author-name-dark{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: #48556A;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.author-bio-dark{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: #48556A;
+    filter: opacity(50%);
+    line-height: 18px;
+}
+
+.author-name-light{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.author-bio-light{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: #FFFFFF;
+    filter: opacity(50%);
+    line-height: 18px;
+}
